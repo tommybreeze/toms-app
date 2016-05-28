@@ -1,0 +1,24 @@
+<h1>Page#home</h1>
+<p>Find me in app/views/page/home.html.erb</p>
+
+<% if admin_signed_in? %>
+
+<h1>Hello user </h1>
+<%= current_admin.email %></br>
+<% if current_admin.god_mode? %>
+
+<h2>God Mode is TRUE </h2>
+
+<% end %>
+<% if current_admin.report_only? %>
+
+<h2>Report only is TRUE </h2>
+
+<% else %>
+<h2>Report only is False </h2>
+
+<% end %>
+
+
+
+<% end %>
